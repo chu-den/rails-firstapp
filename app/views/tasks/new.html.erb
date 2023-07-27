@@ -1,0 +1,19 @@
+<h1>新規TODO</h1>
+<%= form_with model: @task, url: tasks_path do |f| %>
+	<div>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </div>
+    <div>
+        <%= f.label :priority %>
+        <%= f.number_field :priority %>
+    </div>
+    <div>
+        <%= f.label :status %>
+        <%= f.select :status, Task.statuses.keys.map {|k| [k, k]} %>
+    </div>
+    <div>
+        <%= f.submit %>
+    </div>
+<% end %>
+<%= link_to "戻る", tasks_path %>
