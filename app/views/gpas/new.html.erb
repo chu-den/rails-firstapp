@@ -1,0 +1,15 @@
+<h1>GPAポイント追加</h1>
+<%= form_with model: @gpa, url: gpas_path do |f| %>
+	<div>
+        <%= f.label :class %>
+        <%= f.text_field :class %>
+    </div>
+    <div>
+        <%= f.label :evaluation %>
+        <%= f.select :evaluation, GPA.evaluation.keys.map {|k| [k, k]} %>
+    </div>
+    <div>
+        <%= f.submit %>
+    </div>
+<% end %>
+<%= link_to "戻る", gpas_path %>
