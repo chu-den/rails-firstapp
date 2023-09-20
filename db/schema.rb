@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_19_152157) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_20_082312) do
   create_table "blogs", charset: "utf8mb4", force: :cascade do |t|
     t.string "title"
     t.text "content"
@@ -19,7 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_19_152157) do
   end
 
   create_table "gpas", charset: "utf8mb4", force: :cascade do |t|
-    t.string "class"
+    t.string "classname"
     t.integer "evaluation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

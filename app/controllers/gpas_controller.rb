@@ -5,15 +5,15 @@ class GpasController < ApplicationController
         @score = 0
         
         @gpas.each do |gpa|
-            if gpa.status == "S"
+            if gpa.evaluation == "S"
                 @score += 4
-            elsif gpa.status == "A"
+            elsif gpa.evaluation == "A"
                 @score += 3
-            elsif gpa.status == "B"
+            elsif gpa.evaluation == "B"
                 @score += 2
-            elsif gpa.status == "C"
+            elsif gpa.evaluation == "C"
                 @score += 1
-            elsif gpa.status == "D" || gpa.status == "F" || gpa.status == "Z"
+            elsif gpa.evaluation == "D" || gpa.evaluation == "F" || gpa.evaluation == "Z"
                 @score += 0
             end
         end
@@ -37,6 +37,6 @@ class GpasController < ApplicationController
 
     private
     def gpa_params
-        params.require(:gpa).permit(:class, :evaluation)
+        params.require(:gpa).permit(:classname, :evaluation)
     end
 end

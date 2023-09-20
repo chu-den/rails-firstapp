@@ -30,8 +30,8 @@
 	<tbody>
 		<% @gpas.each do |gpa| %>
 			<tr>
-				<td><%= gpa.title %></td>
-				<td><%= gpa.status %></td>
+				<td><%= gpa.classname %></td>
+				<td><%= gpa.evaluation %></td>
 				<td><%= link_to '削除', gpa_path(gpa), method: :delete, data: { confirm: 'Are you sure?' } %></td>
 			</tr>
 		<% end %>
