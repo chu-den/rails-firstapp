@@ -25,7 +25,7 @@ class GpasController < ApplicationController
     end
 
     def create
-        @gpa = Gpa.create(gpas_params)
+        @gpa = Gpa.create(gpa_params)
         redirect_to gpas_path
     end
 

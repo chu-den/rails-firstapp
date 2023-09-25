@@ -6,7 +6,7 @@
     </div>
     <div>
         <%= f.label :evaluation %>
-        <%= f.select :evaluation, Gpa.evaluation.keys.map {|k| [k, k]} %>
+        <%= f.select :evaluation, Gpa.evaluations.keys.map {|k| [k, k]} %>
     </div>
     <div>
         <%= f.submit %>
